@@ -20,39 +20,31 @@
                 case 3: 
                     return 'scissors';
                     break;
-                default:
-                    console.log('Something went horribly wrong...');
             }
         }
 
         function playRound(playerSelection, computerSeletion) {
             if (playerSelection === 'rock' && computerSeletion === 'paper') {
-                result = 'You Lose! Paper beats Rock.';
-                return result;
-            } else if (playerSelection === 'Paper' && computerSeletion === 'rock') {
-                result = 'You Win! Paper beats Rock.';
-                return result;
+                return 'You Lose! Paper beats Rock.';
+            } else if (playerSelection === 'paper' && computerSeletion === 'rock') {
+                return 'You Win! Paper beats Rock.';
             } else if (playerSelection === 'rock' && computerSeletion === 'scissors') {
-                result = 'You Win! Rock beats Scissors.';
-                return result;
+                return 'You Win! Rock beats Scissors.';
             } else if (playerSelection === 'scissors' && computerSeletion === 'rock') {
-                result = 'You Lose! Rock beats Scissors.';
-                return result;
+                return 'You Lose! Rock beats Scissors.';
             } else if (playerSelection === 'paper' && computerSeletion === 'scissors') {
-                result = 'You Lose! Scissors beats Paper.';
-                return result;
+                return 'You Lose! Scissors beats Paper.';
             } else if (playerSelection === 'scissors' && computerSeletion === 'paper') {
-                result = 'You Win! Scissors beats Paper.';
-                return result;
-            } else if (playerSelection === computerSeletion) {
-                console.log('You made the same choice as the computer, repeat another time.');
+                return 'You Win! Scissors beats Paper.';
             } else {
-                console.log('Something went horribly wrong...');
+                return "It's a tie!";
             }
         }
         playerSelection = prompt('Enter your choice: ');
         playerSelection = playerSelection.toLowerCase();
+        console.log(`You choose ${playerSelection}.`);
         computerSelection = computerPlay();
+        console.log(`The computer choose ${computerSelection}.`);
         console.log(playRound(playerSelection, computerSelection));
     </script>
 </body>
