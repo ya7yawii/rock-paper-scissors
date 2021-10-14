@@ -21,9 +21,39 @@
                     return 'scissors';
                     break;
                 default:
-                    console.log('Something went horribly wrong...')
+                    console.log('Something went horribly wrong...');
             }
         }
+
+        function playRound(playerSelection, computerSeletion) {
+            if (playerSelection === 'rock' && computerSeletion === 'paper') {
+                result = 'You Lose! Paper beats Rock.';
+                return result;
+            } else if (playerSelection === 'Paper' && computerSeletion === 'rock') {
+                result = 'You Win! Paper beats Rock.';
+                return result;
+            } else if (playerSelection === 'rock' && computerSeletion === 'scissors') {
+                result = 'You Lose! Rock beats Scissors.';
+                return result;
+            } else if (playerSelection === 'scissors' && computerSeletion === 'rock') {
+                result = 'You Win! Rock beats Scissors.';
+                return result;
+            } else if (playerSelection === 'paper' && computerSeletion === 'scissors') {
+                result = 'You Lose! Scissors beats Paper.';
+                return result;
+            } else if (playerSelection === 'scissors' && computerSeletion === 'paper') {
+                result = 'You Win! Scissors beats Paper.';
+                return result;
+            } else if (playerSelection === computerSeletion) {
+                console.log('You made the same choice as the computer, repeat another time.');
+            } else {
+                console.log('Something went horribly wrong...');
+            }
+        }
+        playerSelection = prompt('Enter your choice: ');
+        playerSelection = playerSelection.toLowerCase();
+        computerSelection = computerPlay();
+        console.log(playRound(playerSelection, computerSelection));
     </script>
 </body>
 </html>
