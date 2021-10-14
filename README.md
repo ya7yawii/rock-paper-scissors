@@ -1,0 +1,1 @@
+This program let the user input a choice between paper, rock or scissors and compare it to a random choice by the computer between the same elements. Then the program decides who is the winner.
