@@ -13,23 +13,31 @@ h1 {
     margin:0 auto 80px;
 }
 
-.imgbutton {
-    width: 130px;
-}
-
 button {
-    height: 145px;
-    width: 145px;
+    height: 120px;
+    width: 120px;
     border-radius: 50%;
     border: 5px solid purple;
     padding: 0;
 }
 
-button:hover {
+.userchoice button:hover {
     border: none;
 }
 
-.choices {
+.player-container {
+    border:5px solid black;
+    border-radius: 10px;
+    padding: 10px 50px;
+}
+
+.container {
     display: flex;
     justify-content: space-around;
+}
+
+.player-label {
+    color: purple;
+    text-align: center;
+    margin-bottom: 3px;
 }
